@@ -1,0 +1,85 @@
+/* ===== SKILLS: PLC boshqaruv shkafi / ladder logic ===== */
+#s-skills{background:radial-gradient(ellipse at 50% 20%,#101a2c 0%,#04070d 75%)}
+#s-skills canvas,#s-projects canvas,#s-experience canvas,#s-contact canvas{opacity:.95}
+.plc-st{display:flex;align-items:center;gap:10px;margin:-18px 0 26px;font:600 .95rem ui-monospace,Consolas,monospace;color:#9fb0c8}
+.plc-st i{width:10px;height:10px;border-radius:50%;background:#35ff7a;box-shadow:0 0 10px #35ff7a;animation:led 1.6s infinite}
+@keyframes led{50%{opacity:.3}}
+#s-skills .sk-card{border-radius:6px;border:1px solid rgba(255,214,10,.28);border-left:3px solid #ffd60a;
+  background:rgba(7,11,19,.9);padding:22px 22px 20px 28px}
+#s-skills .sk-card::after{content:"";position:absolute;left:10px;top:31px;width:7px;height:7px;border-radius:50%;
+  background:#35ff7a;box-shadow:0 0 8px #35ff7a;animation:led 2.4s infinite}
+#s-skills .sk-card:nth-child(3n)::after{animation-delay:-.8s}
+#s-skills .sk-card:nth-child(3n+1)::after{animation-delay:-1.6s;background:#ffd60a;box-shadow:0 0 8px #ffd60a}
+#s-skills .sk-bar{border-radius:3px;height:16px}
+#s-skills .sk-bar::after{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent 0 9px,#070b13 9px 11px)}
+#s-skills .sk-fill{border-radius:0}
+
+/* ===== PROJECTS: chizma / blueprint ===== */
+#s-projects{background-color:#0a2d57;
+  background-image:linear-gradient(rgba(160,220,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(160,220,255,.10) 1px,transparent 1px),
+  linear-gradient(rgba(160,220,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(160,220,255,.05) 1px,transparent 1px);
+  background-size:100px 100px,100px 100px,20px 20px,20px 20px;background-attachment:fixed}
+.bp-title{position:relative;display:inline-block;align-self:flex-start;padding-bottom:16px;margin-bottom:8px;
+  font-size:clamp(2.5rem,6vw,4rem);font-weight:900;color:#e4f7ff;letter-spacing:-.01em}
+.bp-title::after{content:"";position:absolute;left:0;right:0;bottom:0;height:11px;
+  background:linear-gradient(#9fe8ff,#9fe8ff) center/100% 1px no-repeat,linear-gradient(#9fe8ff,#9fe8ff) left/1px 11px no-repeat,
+  linear-gradient(#9fe8ff,#9fe8ff) right/1px 11px no-repeat}
+.bp-sub{color:#9cc3e0;margin-bottom:30px;font-size:1.02rem}
+#s-projects .pj-card{--b:linear-gradient(#7fe3ff,#7fe3ff);border-radius:4px;border:1px solid rgba(160,220,255,.4);
+  background:rgba(6,30,62,.8);box-shadow:none}
+#s-projects .pj-card::after{inset:7px;padding:0;border-radius:0;opacity:.75;-webkit-mask:none;mask:none;
+  background:var(--b) left top/14px 1px no-repeat,var(--b) left top/1px 14px no-repeat,
+  var(--b) right top/14px 1px no-repeat,var(--b) right top/1px 14px no-repeat,
+  var(--b) left bottom/14px 1px no-repeat,var(--b) left bottom/1px 14px no-repeat,
+  var(--b) right bottom/14px 1px no-repeat,var(--b) right bottom/1px 14px no-repeat}
+#s-projects .pj-card:hover{border-color:#9fe8ff;box-shadow:0 0 28px rgba(127,227,255,.3)}
+#s-projects .pj-icon{border-radius:4px;border:1px dashed rgba(160,220,255,.7);background:rgba(127,227,255,.08)}
+#s-projects .pj-btn{color:#ffd60a}
+.pj-media{font:600 .78rem ui-monospace,Consolas,monospace;color:#7fb4d6}
+
+/* ===== EXPERIENCE: SCADA / HMI panel ===== */
+#s-experience{background:radial-gradient(ellipse at 40% 40%,#150f03 0%,#050301 100%)}
+#s-experience .exp-card{border-radius:8px;overflow:hidden;padding-top:70px;border-color:rgba(255,214,10,.4)}
+#s-experience .exp-card::before{content:"SCADA  /  Talimarjon IES  /  IAO sexi";position:absolute;left:0;right:0;top:0;height:38px;
+  padding:0 20px;display:flex;align-items:center;font:600 .8rem ui-monospace,Consolas,monospace;color:#c9a40a;
+  background:rgba(255,214,10,.08);border-bottom:1px solid rgba(255,214,10,.25)}
+#s-experience .exp-card::after{content:"LIVE";position:absolute;right:20px;top:0;height:38px;display:flex;align-items:center;gap:8px;
+  font:700 .8rem ui-monospace,Consolas,monospace;color:#35ff7a;animation:led 1.4s infinite}
+#s-experience .exp-tag{border-radius:6px}
+.exp-tag .live{margin-left:auto;font:700 .92rem ui-monospace,Consolas,monospace;color:#ffd60a;text-shadow:0 0 10px rgba(255,214,10,.6)}
+
+/* ===== CONTACT: RFID signal ===== */
+#s-contact .contact-card{border-radius:22px}
+#s-contact .contact-icon{position:relative}
+#s-contact .contact-icon::before,#s-contact .contact-icon::after{content:"";position:absolute;inset:-2px;border-radius:inherit;
+  border:1px solid #00f0ff;opacity:0;pointer-events:none}
+#s-contact .contact-card:hover .contact-icon::before{animation:rip 1.4s infinite}
+#s-contact .contact-card:hover .contact-icon::after{animation:rip 1.4s .5s infinite}
+@keyframes rip{from{opacity:.9;transform:scale(1)}to{opacity:0;transform:scale(2.3)}}
+
+/* ===== MODAL: rasm va video galereyasi ===== */
+.modal-content{max-height:92vh;overflow:auto}
+.modal-media .ph{display:none;padding:24px;text-align:center;color:#94a3b8;line-height:1.6;font-size:.95rem}
+.thumbs{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 16px}
+.thumbs button{padding:8px 14px;border-radius:8px;border:1px solid rgba(0,240,255,.35);background:rgba(0,240,255,.06);
+  color:#cfeeff;font:600 .85rem inherit;font-family:inherit;cursor:pointer;transition:background .2s,border-color .2s}
+.thumbs button:hover{background:rgba(0,240,255,.16)}
+.thumbs button.on{background:#00f0ff;color:#02202a;border-color:#00f0ff}
+.thumbs button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+@media (prefers-reduced-motion:reduce){.plc-st i,#s-skills .sk-card::after,#s-experience .exp-card::after{animation:none}}
+
+
+/* Modal: rasm va video to'liq sig'sin */
+.modal-media{aspect-ratio:auto;height:min(60vh,540px);background:#020617}
+.modal-media img,.modal-media video{width:100%;height:100%;object-fit:contain!important}
+.modal-content{padding:24px}
+@media (max-width:600px){
+  .modal{padding:12px}
+  .modal-content{padding:16px;border-radius:18px}
+  .modal-media{height:30vh}
+}
+
+.modal-media{position:relative}
+
